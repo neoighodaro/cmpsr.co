@@ -22,7 +22,32 @@ This project was built with Laravel and installation is similar. Nothing specifi
 
 ## Usage
 
-To generate a package send a POST request to `/install` with `data` as the body of the request. The value of `data` should be the contents of the `composer.json` file.
+To generate a package send a POST request to `/install` with `data` as the body of the request. The value of `data` should be the contents of the `composer.json` file. For example:
+
+```php
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://cmpsr.co/install",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\n\t\"data\": \"{\\\"name\\\": \\\"neo\\/dumpr\\\",\\\"description\\\": \\\"a project\\\",\\\"require\\\":{\\\"symfony\\/var-dumper\\\": \\\"^4.3\\\"}}\"\n}",
+  CURLOPT_HTTPHEADER => array(
+    "Accept: application/json",
+    "Content-Type: application/json",
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if (! $err) {
+  echo $response;
+}
+```
 
 ## Known limitations
 
