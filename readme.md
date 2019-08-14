@@ -32,7 +32,7 @@ curl_setopt_array($curl, array(
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n\t\"data\": \"{\\\"name\\\": \\\"neo\\/dumpr\\\",\\\"description\\\": \\\"a project\\\",\\\"require\\\":{\\\"symfony\\/var-dumper\\\": \\\"^4.3\\\"}}\"\n}",
+  CURLOPT_POSTFIELDS => "{\"data\": \"{\\\"name\\\": \\\"neo\\/dumpr\\\",\\\"description\\\": \\\"a project\\\",\\\"require\\\":{\\\"symfony\\/var-dumper\\\": \\\"^4.3\\\"}}\"}",
   CURLOPT_HTTPHEADER => array(
     "Accept: application/json",
     "Content-Type: application/json",
