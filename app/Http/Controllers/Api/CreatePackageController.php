@@ -50,7 +50,7 @@ class CreatePackageController extends Controller
             Artisan::call("composer:install {$hash}");
 
             if ($this->publicStorage->exists("{$hash}.zip")) {
-                $package = Package::query()->create(['hash' => $hash]);
+                $package = Package::query()->firstOrCreate(['hash' => $hash]);
             }
         }
 
