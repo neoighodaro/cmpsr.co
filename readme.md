@@ -8,9 +8,9 @@ When developing on my iPad Pro locally using DraftCode, I noticed it was very di
 
 #### How it works
 
-It works by generating a zipped vendor directory based on the composer file you give to it. Then when the generation is complete, it returns the hash and URL of the ZIP file.
+It works by generating a zipped vendor directory based on the composer file you give to it. Then when the generation is complete, it returns the hash and URL of the ZIP file. For now this works for me, though it has some limitations which could be addressed later.
 
-For now this works for me, though it has some limitations which could be addressed later.
+You can see a sample fetcher script at `cmpsr.php`. Update this file and run it using a browser.
 
 ## Installation
 
