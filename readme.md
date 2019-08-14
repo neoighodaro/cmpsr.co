@@ -19,6 +19,8 @@ This project was built with Laravel and installation is similar. Nothing specifi
 -   An environment file (.env) with the correct database settings
 -   Run `composer install` in the root of the project
 -   Run `php artisan migrate` to migrate the database
+-   Run `php artisan storage:link` to link the `app/public` dirctory to `public/storage`
+-   Rename the `public/storage` directory to `public/packages`
 
 ## Usage
 
