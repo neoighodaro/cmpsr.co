@@ -36,7 +36,7 @@ class CreatePackageRequest extends FormRequest
     {
         return [
             'data' => ['required', new ValidComposerJson],
-            'hash' => ['required', 'unique:packages'],
+            'hash' => ['required'],
         ];
     }
 
